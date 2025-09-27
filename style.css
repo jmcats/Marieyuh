@@ -1,0 +1,113 @@
+   :root{
+      --card: #ffffff;
+      --muted: #b18757;
+      --accent: #ffbbbb; 
+      --accent-2: #fddfb2;
+      --glass: rgba(255, 183, 207, 0.7);
+      --radius: 14px;
+      --max-width: 1100px;
+      font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+      color: #a34c36;
+
+      
+  background-image: url("https://marketplace.canva.com/EAFhwfMq3ds/1/0/1600w/canva-colorful-cute-cats-illustration-desktop-wallpaper-KBBZLdpjLcM.jpg");
+  background-size: cover; 
+  background-position: center; 
+  background-attachment: fixed;
+
+    }
+
+
+    *{box-sizing:border-box}
+    html,body{height:100%;margin:0;background:linear-gradient(180deg,var(--bg),#eef5f9);}
+    .container{
+      max-width:var(--max-width);
+      margin:36px auto; 
+      padding:28px;
+    }
+
+    /* Header */
+    .header{
+      display:flex;gap:20px;align-items:center;margin-bottom:18px;
+    }
+    .avatar{
+      width:110px;height:110px;border-radius:999px;overflow:hidden;flex:0 0 110px;border:6px solid var(--glass);box-shadow:0 6px 20px rgba(0, 0, 0, 0.06);
+    }
+    .avatar img{width:100%;height:100%;object-fit:cover;display:block}
+    .hero{
+      flex:1;display:flex;flex-direction:column;gap:6px;
+    }
+    .name{font-size:26px;font-weight:700;letter-spacing:0.2px}
+    .tag{font-size:14px;color:var(--muted)}
+
+    /* Top info cards row */
+    .top-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:18px}
+    .card{background:var(--card);border-radius:var(--radius);padding:16px;box-shadow:0 8px 30px rgba(43, 43, 95, 0.06)}
+
+    .about-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+    .about-item{background:linear-gradient(180deg,var(--glass),#ffffff);padding:12px;border-radius:12px;text-align:center}
+    .about-item h4{margin:0;font-size:12px;color:var(--muted);font-weight:600}
+    .about-item p{margin:8px 0 0;font-weight:700}
+
+    /* Main showcase row: left small contact column + right big artworks column */
+    .main-row{display:grid;grid-template-columns:270px 1fr;gap:18px;margin-top:22px}
+
+    .contact-card{display:flex;flex-direction:column;gap:10px;align-items:flex-start}
+    .contact-item{display:flex;gap:10px;align-items:center;padding:10px;border-radius:10px;background:linear-gradient(90deg,var(--accent),var(--accent-2));color:#123;box-shadow:0 8px 18px rgba(154,211,222,0.12)}
+    .contact-item a{color:inherit;text-decoration:none;font-weight:600}
+
+    .art-grid{display:grid;grid-template-columns:repeat(1,1fr);gap:12px}
+    .art-card{display:flex;flex-direction:column;gap:10px;padding:14px;border-radius:12px;background:linear-gradient(180deg,#fff, #fbfdff)}
+    .art-card .thumb{height:220px;border-radius:10px;overflow:hidden;background:#e9f5f7;display:flex;align-items:center;justify-content:center}
+    .art-card .thumb img{width:100%;height:100%;object-fit:cover}
+    .art-meta{display:flex;justify-content:space-between;align-items:center}
+    .art-title{font-weight:700}
+    .art-desc{color:var(--muted);font-size:13px}
+
+    /* Achievementss and Skillz */
+    .skills{margin-top:18px;display:flex;flex-direction:column;gap:12px}
+    .skill-badges{display:flex;flex-wrap:wrap;gap:8px}
+    .badge{padding:8px 10px;border-radius:999px;background:linear-gradient(90deg,#ffd8d8,#f8fbfd);box-shadow:0 6px 16px rgba(36,52,71,0.04);font-weight:600}
+
+    .achievements{margin-top:12px}
+    .achievements ul{margin:8px 0 0;padding-left:18px}
+
+    /* Gallery walk (horizontal scroll) */
+    .gallery-wrap{margin-top:20px}
+    .gallery-title{font-size:18px;font-weight:700;margin-bottom:8px}
+    .gallery{display:flex;gap:12px;overflow-x:auto;padding-bottom:6px}
+    .gallery .g-item{min-width:260px;height:160px;border-radius:12px;flex:0 0 auto;overflow:hidden;box-shadow:0 8px 22px rgba(36,52,71,0.06)}
+    .gallery .g-item img{width:100%;height:100%;object-fit:cover;display:block}
+
+
+    /* Footer */
+    .footer{margin-top:26px;text-align:center;color:var(--muted);font-size:13px}
+
+/* button up */
+#backToTop {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  --glass: #ffffff;
+  color: rgb(219, 135, 110);
+  padding: 10px 15px;
+  border-radius: 8px;
+  font-size: 14px;
+  text-decoration: none;
+  font-weight: bold;
+  box-shadow: 0 6px 6px rgba(48, 9, 2, 0.815);
+  transition: background 0.3s ease;
+}
+
+#backToTop:hover {
+  background-color: #d6467d;
+}
+
+    /* Responsive */
+    @media (max-width:900px){
+      .top-grid{grid-template-columns:1fr}
+      .main-row{grid-template-columns:1fr;}
+      .contact-card{flex-direction:row;justify-content:space-between}
+      .art-card .thumb{height:160px}
+      .avatar{width:90px;height:90px}
+    }
